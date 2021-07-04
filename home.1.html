@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="public/css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css" />
+
+    <title>MVST Matrimony‎</title>
+</head>
+
+<body>
+
+
+    <div class="container">
+
+        <h2>Complete Your Profile</h2>
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#personal_tab"><b> Personal Details </b></a></li>
+            <li><a data-toggle="tab" href="#photo_tab"><b>Manage Photos</b></a></li>
+
+            <li><a data-toggle="tab" href="#educational_tab"><b> Educational Details </b></a></li>
+            <li><a data-toggle="tab" href="#professional_tab"><b> Professional Details </b></a></li>
+            <li><a data-toggle="tab" href="#family_tab"><b> Family Details</b></a></li>
+            <li><a data-toggle="tab" href="#contact_tab"><b> Contact Details & Other Details</b></a></li>
+
+        </ul>
+
+        <div class="tab-content">
+            <div id="personal_tab" class="tab-pane fade in active">
+                <form>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                            <div class="form-group">
+                                <label for="">Full Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <div class="form-group">
+                                <label for="gender">Gender</label>
+                                <select class="form-control" id="gender">
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                            <div class="form-group">
+                                <label for="">Complexion</label>
+                                <select class="form-control" id="complexion">
+                                    <option id='Milky White/Very Fair'>Milky White / Very Fair</option>
+                                    <option id='Fair'>Fair</option>
+                                    <option id='Wheatish'>Wheatish</option>
+                                    <option id='Wheatish Brown'>Wheatish Brown</option>
+                                    <option id='Dark'>Dark</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <div class="form-group">
+                                <label for="">Date of Birth </label>
+                                <div class="input-group date">
+                                    <input type="text" id="dob" placeholder="yyyy-mm-dd" class="form-control"><span
+                                        class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                            <div class="form-group">
+                                <label for="">Height</label>
+                                <input type="text" id="height" class="form-control"  placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <div class="form-group">
+                                <label for="">Weight</label>
+                                <input type="text" class="form-control" id="weight" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12 col-md-4">
+                            <div class="form-group">
+                                <label for="">Caste</label>
+                                <input type="text" class="form-control" id="caste" placeholder="">
+                            </div>
+                        </div>
+                        <!-- <div class="col-sm-12 col-md-6">
+                            <div class="form-group">
+                                <label for="">Maritial Status</label>
+                                <input type="text" class="form-control" id="maritial_status" placeholder="">
+                            </div>
+                        </div> -->
+
+                        <div class="col-sm-12 col-md-4">
+                            <div class="form-group">
+                                <label for="">Manglik</label>
+                                <select class="form-control" id="manglik">
+                                    <option value="No">No</option>
+                                    <option value="Yes">Yes</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-4">
+                            <div class="form-group">
+                                <label for="">Mool/Star</label>
+                                <input type="text" class="form-control" id="mool" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                            <div class="form-group">
+                                <label for="">Mool/Star</label>
+                                <input type="text" class="form-control" id="mool" placeholder="">
+                            </div>
+                        </div>
+                    </div> -->
+
+
+                    <div class="row">
+                        <div class="col-sm-12 col-md-2">
+                            <div class="form-group">
+                                <button type="button" id="personal_update" class="btn btn-success"> Save / Update and Next</button>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-10">
+                            <div id="waiting_spiner" class="loader"></div>
+                            <div id="personal_conf" class="alert alert-success" style="display:none">
+                                <strong>Success!</strong><span id="personal_conf_msg"></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    
+                    </form>
+            </div>
+            <div id="photo_tab" class="tab-pane fade">
+                <!-- <span class="glyphicon glyphicon-user" style="font-size:100px"></span> -->
+                <h4>Upload high resolution photos(maximum 10 photos)</h4>
+                <form name="upload_form" id="upload_form"  enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-3">
+                            <div class="form-group">
+                                <!-- <label for="">Add New Photo</label> -->
+                                <input type="file" class="custom-file-input" id="" value="Add New Photo">
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <div class="form-group">
+                                <button type="button" id="upload_photos" class="btn btn-success"> Upload</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+
+                <h5>Your Uploaded Photos:</h5>
+                <div id="uploaded_img">
+
+
+                    <!-- <a class="img_custom" data-fancybox="gallery" href="public/images/three.jpg"><img class="img_custom"  src="public/images/one.jpg"></a>
+                    <a class="img_custom" data-fancybox="gallery" href="public/images/big.jpg"> <img class="img_custom" src="public/images/two.jpg"></a>
+                    <a  class="img_custom" data-fancybox="gallery" href="public/images/four.jpeg"><img class="img_custom"  src="public/images/four.jpeg"></a>
+                    <a class="img_custom" data-fancybox="gallery" href="public/images/five.jpeg"><img class="img_custom"  src="public/images/five.jpeg"></a>
+                 -->
+                </div>
+
+            </div>
+            <div id="educational_tab" class="tab-pane fade">
+                <h4>Only Higher Education Details</h4>
+
+                <form>
+
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                            <label for="higher_education">Higher Education</label>
+                            <select class="form-control" id="higher_education">
+
+                            </select>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <label for="">Degree</label>
+
+                            <select class="form-control" id="degree">
+
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Education In Details</label>
+                        <textarea class="form-control" rows="2" id="education_details"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" id="create_update" class="btn btn-success"> Save / Update and Next
+                        </button>
+                    </div>
+
+
+                </form>
+            </div>
+            <div id="professional_tab" class="tab-pane fade">
+                <h4>What you do for living. / आप क्या काम करते हैं।</h4>
+                <form>
+
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                            <label for="Job_Type">Job Type</label>
+                            <select class="form-control" id="job_type">
+                                <option value="">Select job type</option>
+                                <option value="Private Job">Private Job</option>
+                                <option value="Government Job">Government Job</option>
+                                <option value="Self Employed">Self Employed</option>
+                                <option value="Business">Business</option>
+                                <option value="Student">Student</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <label for="">Income</label>
+                            <select class="form-control" id="income">
+                                <option value='1'>0 - 1 lakh</option>
+                                <option value='2'>1 - 2 lakhs</option>
+                                <option value='3'>2 - 3 lakhs</option>
+                                <option value='4'>3 - 4 lakhs</option>
+                                <option value='5'>4 - 5 lakhs</option>
+                                <option value='6'>5 - 6 lakhs</option>
+                                <option value='7'>6 - 7 lakhs</option>
+                                <option value='8'>7 - 8 lakhs</option>
+                                <option value='9'>8 - 9 lakhs</option>
+                                <option value='10'>9 - 10 lakhs</option>
+                                <option value='12'>10 - 12 lakhs</option>
+                                <option value='14'>12 - 14 lakhs</option>
+                                <option value='16'>14 - 16 lakhs</option>
+                                <option value='18'>16 - 18 lakhs</option>
+                                <option value='20'>18 - 20 lakhs</option>
+                                <option value='23'>20 - 23 lakhs</option>
+                                <option value='26'>23 - 26 lakhs</option>
+                                <option value='29'>26 - 29 lakhs</option>
+                                <option value='30'>30 - Above</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="job_details">Job Details</label>
+                        <textarea class="form-control" rows="2" id="job_details"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="previous_job_details">Previous Job Details if any</label>
+                        <textarea class="form-control" rows="2" id="previous_job_details"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" id="create_update" class="btn btn-success"> Save / Update and Next
+                        </button>
+                    </div>
+
+
+
+                </form>
+            </div>
+            <div id="family_tab" class="tab-pane fade">
+                <h4>Family Details</h4>
+                <form>
+
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                            <label for="father_name">Father Name</label>
+                            <input type="text" class="form-control" id="father_name" placeholder="">
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <label for="father_prof">Father Profession</label>
+                            <input type="text" class="form-control" id="father_prof" placeholder="">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                            <label for="">Mother Name</label>
+                            <input type="text" class="form-control" id="mother_name" placeholder="">
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <label for="">Mother Profession</label>
+                            <input type="text" class="form-control" id="mother_prof" placeholder="">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                            <label for="">Total Number of Sister(s)</label>
+                            <select class="form-control" id="num_of_sister">
+                                <option value='0'>0</option>
+                                <option value='1'>1</option>
+                                <option value='2'>2</option>
+                                <option value='3'>3</option>
+                                <option value='4'>4</option>
+                                <option value='5'>5</option>
+                                <option value='6'>6</option>
+                                <option value='7'>7</option>
+                                <option value='8'>8</option>
+                                <option value='9'>9</option>
+                                <option value='10'>10</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <label for="">Total Number of Sister(s) got married</label>
+                            <select class="form-control" id="num_of_sister_married">
+                                <option value='0'>0</option>
+                                <option value='1'>1</option>
+                                <option value='2'>2</option>
+                                <option value='3'>3</option>
+                                <option value='4'>4</option>
+                                <option value='5'>5</option>
+                                <option value='6'>6</option>
+                                <option value='7'>7</option>
+                                <option value='8'>8</option>
+                                <option value='9'>9</option>
+                                <option value='10'>10</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                            <label for="">Total Number of Brother(s)</label>
+                            <select class="form-control" id="num_of_brother">
+                                <option value='0'>0</option>
+                                <option value='1'>1</option>
+                                <option value='2'>2</option>
+                                <option value='3'>3</option>
+                                <option value='4'>4</option>
+                                <option value='5'>5</option>
+                                <option value='6'>6</option>
+                                <option value='7'>7</option>
+                                <option value='8'>8</option>
+                                <option value='9'>9</option>
+                                <option value='10'>10</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <label for="">Total Number of Brother(s) got Married</label>
+                            <select class="form-control" id="num_of_brother_married">
+                                <option value='0'>0</option>
+                                <option value='1'>1</option>
+                                <option value='2'>2</option>
+                                <option value='3'>3</option>
+                                <option value='4'>4</option>
+                                <option value='5'>5</option>
+                                <option value='6'>6</option>
+                                <option value='7'>7</option>
+                                <option value='8'>8</option>
+                                <option value='9'>9</option>
+                                <option value='10'>10</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" id="create_update" class="btn btn-success"> Save / Update and Next
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+            <div id="contact_tab" class="tab-pane fade">
+                <h4>Contact Details & Other Details</h4>
+                <form>
+
+                    <div class="row">
+                        <div class="col-sm-12 col-md-4">
+                            <div class="form-group">
+                                <label for="">Current State</label>
+                                <select class="form-control" name="" id="current_state">
+
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-4">
+                            <div class="form-group">
+                                <label for="=">Current City</label>
+                                <select class="form-control" name="" id="current_city">
+                                    <option value="" disabled selected style="display: none;">first select a state</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-md-4">
+                            <div class="form-group">
+                                <label for="">Current Address</label>
+                                <textarea class="form-control" rows="1" id="current_address"></textarea>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12 col-md-4">
+                            <div class="form-group">
+                                <label for="">Permanent State</label>
+                                <select class="form-control" name="" id="permanent_state">
+
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-4">
+                            <div class="form-group">
+                                <label for="=">Permanent City</label>
+                                <select class="form-control" name="" id="permanent_city">
+                                    <option value="" disabled selected style="display: none;">first select a state</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-md-4">
+                            <div class="form-group">
+                                <label for="">Permanent Address</label>
+                                <textarea class="form-control" rows="1" id="permanent_address"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                            <div class="form-group">
+                                <label for="">Mobile number and Alternative numbers by comma separated </label>
+                                <input type="text" class="form-control" id="mobile" placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <div class="form-group">
+                                <label for="=">Email and Alternative emails by comma separated </label>
+                                <input type="email" class="form-control" id="email" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <span> <b>Note :</b> You can enter multple mobile number(s). & email(s) by comma <b>,</b>
+                            separated and can
+                            also be use for login. :)</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Other Details (upto 4000 Character can be write/paste)</label>
+                        <textarea class="form-control" rows="3" id="other_details"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="button" id="create_update" class="btn btn-success"> Save / Update </button>
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+
+
+
+    </div>
+    <!-- containter end -->
+
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.js"></script>
+    <script src="public/javascript/static-data.js"></script>
+
+    <script src="public/javascript/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.js"></script>
+
+
+</body>
+
+</html>

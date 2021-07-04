@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="public/css/main.css">
+
+
+
+    <title>MVST Matrimony‎</title>
+</head>
+
+<body>
+
+
+    <div class="container" id="register" style="display: ;">
+
+        
+        <div class="panel panel-default">
+            <div class="panel-heading"><b>Personal Details</b></div>
+            <div class="panel-body">
+                <form>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                            <div class="form-group">
+                                <label for="">Full Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <div class="form-group">
+                                <label for="gender">Gender</label>
+                                <select class="form-control" id="gender">
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                            <div class="form-group">
+                                <label for="">Complexion</label>
+                                <select class="form-control" id="complexion">
+                                    <option id='Milky White/Very Fair'>Milky White / Very Fair</option>
+                                    <option id='Fair'>Fair</option>
+                                    <option id='Wheatish'>Wheatish</option>
+                                    <option id='Wheatish Brown'>Wheatish Brown</option>
+                                    <option id='Dark'>Dark</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <div class="form-group">
+                                <label for="">Date of Birth </label>
+                                <div class="input-group date">
+                                    <input type="text" id="dob" placeholder="dd-mm-yyyy" class="form-control"><span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                            <div class="form-group">
+                                <label for="">Height</label>
+                                <input type="text" id="height" class="form-control" id="password" placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <div class="form-group">
+                                <label for="">Weight</label>
+                                <input type="text" class="form-control" id="weight" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                            <div class="form-group">
+                                <label for="">Caste</label>
+                                <input type="text" class="form-control" id="caste" placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <div class="form-group">
+                                <label for="">Maritial Status</label>
+                                <input type="text" class="form-control" id="maritial_status" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                            <div class="form-group">
+                                <label for="">Maglik</label>
+                                <select class="form-control" id="maglik">
+                                    <option>No</option>
+                                    <option>Yes</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <div class="form-group">
+                                <label for="">Mool/Star</label>
+                                <input type="text" class="form-control" id="mool" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </form>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading"><b>Educational Details</b></div>
+            <div class="panel-body">
+                <form>
+
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                            <label for="higher_education">Higher Education</label>
+                            <select class="form-control" id="higher_education">
+                              
+                            </select>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <label for="">Degree</label>
+
+                            <select class="form-control" id="degree">
+                               
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Education In Details</label>
+                        <textarea class="form-control" rows="1" id="education_details"></textarea>
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+
+
+        <div class="panel panel-default">
+            <div class="panel-heading"><b>Professional Details</b></div>
+            <div class="panel-body">
+                <form>
+
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                            <label for="Job_Type">Job Type</label>
+                            <select class="form-control" id="job_type">
+                                <option>Select job type</option>
+                                <option>Private Job</option>
+                                <option>Government Job </option>
+                                <option>Self Employed</option>
+                                <option>Business</option>
+                                <option>Student</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <label for="">Income</label>
+                            <select class="form-control" id="income">
+                                <option id='1'>0 - 1 lakh</option>
+                                <option id='2'>1 - 2 lakhs</option>
+                                <option id='3'>2 - 3 lakhs</option>
+                                <option id='4'>3 - 4 lakhs</option>
+                                <option id='5'>4 - 5 lakhs</option>
+                                <option id='6'>5 - 6 lakhs</option>
+                                <option id='7'>6 - 7 lakhs</option>
+                                <option id='8'>7 - 8 lakhs</option>
+                                <option id='9'>8 - 9 lakhs</option>
+                                <option id='10'>9 - 10 lakhs</option>
+                                <option id='12'>10 - 12 lakhs</option>
+                                <option id='14'>12 - 14 lakhs</option>
+                                <option id='16'>14 - 16 lakhs</option>
+                                <option id='18'>16 - 18 lakhs</option>
+                                <option id='20'>18 - 20 lakhs</option>
+                                <option id='23'>20 - 23 lakhs</option>
+                                <option id='26'>23 - 26 lakhs</option>
+                                <option id='29'>26 - 29 lakhs</option>
+                                <option id='30'>30 - Above</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="job_details">Job Details</label>
+                        <textarea class="form-control" rows="1" id="job_details"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="previous_job_details">Previous Job Details if any</label>
+                        <textarea class="form-control" rows="1" id="previous_job_details"></textarea>
+                    </div>
+
+
+
+                </form>
+
+
+            </div>
+        </div>
+
+
+
+
+        <div class="panel panel-default">
+            <div class="panel-heading"><b>Family Details</b></div>
+            <div class="panel-body">
+                <form>
+
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                            <label for="father_name">Father Name</label>
+                            <input type="text" class="form-control" id="father_name" placeholder="">
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <label for="father_prof">Father Profession</label>
+                            <input type="text" class="form-control" id="father_prof" placeholder="">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                            <label for="">Mother Name</label>
+                            <input type="text" class="form-control" id="mother_name" placeholder="">
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <label for="">Mother Profession</label>
+                            <input type="text" class="form-control" id="mother_prof" placeholder="">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                            <label for="">Number of Siter(s) including you</label>
+                            <select class="form-control" id="num_of_sister">
+                                <option id='0'>0</option>
+                                <option id='1'>1</option>
+                                <option id='2'>2</option>
+                                <option id='3'>3</option>
+                                <option id='4'>4</option>
+                                <option id='5'>5</option>
+                                <option id='6'>6</option>
+                                <option id='7'>7</option>
+                                <option id='8'>8</option>
+                                <option id='9'>9</option>
+                                <option id='10'>10</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <label for="">Number of Siter(s) Married</label>
+                            <select class="form-control" id="num_of_sister_married">
+                                <option id='0'>0</option>
+                                <option id='1'>1</option>
+                                <option id='2'>2</option>
+                                <option id='3'>3</option>
+                                <option id='4'>4</option>
+                                <option id='5'>5</option>
+                                <option id='6'>6</option>
+                                <option id='7'>7</option>
+                                <option id='8'>8</option>
+                                <option id='9'>9</option>
+                                <option id='10'>10</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                            <label for="">Number of Brother(s) including you</label>
+                            <select class="form-control" id="num_of_brother">
+                                <option id='0'>0</option>
+                                <option id='1'>1</option>
+                                <option id='2'>2</option>
+                                <option id='3'>3</option>
+                                <option id='4'>4</option>
+                                <option id='5'>5</option>
+                                <option id='6'>6</option>
+                                <option id='7'>7</option>
+                                <option id='8'>8</option>
+                                <option id='9'>9</option>
+                                <option id='10'>10</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <label for="">Number of Brother(s) Married</label>
+                            <select class="form-control" id="num_of_brother_married">
+                                <option id='0'>0</option>
+                                <option id='1'>1</option>
+                                <option id='2'>2</option>
+                                <option id='3'>3</option>
+                                <option id='4'>4</option>
+                                <option id='5'>5</option>
+                                <option id='6'>6</option>
+                                <option id='7'>7</option>
+                                <option id='8'>8</option>
+                                <option id='9'>9</option>
+                                <option id='10'>10</option>
+                            </select>
+                        </div>
+                    </div>
+
+
+
+                </form>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading"><b>Contact Details & Other Details</b></div>
+            <div class="panel-body">
+                <form>
+                    
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                            <div class="form-group">
+                                <label for="">Current State</label>
+                                <select class="form-control" name="" id="current_state">
+
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <div class="form-group">
+                                <label for="=">Current City</label>
+                                <select class="form-control" name="" id="current_city">
+                                    <option value="" disabled selected style="display: none;">first select a state</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                            <label for="">Current Address</label>
+                            <textarea class="form-control" rows="1" id="current_address"></textarea>
+                    </div>
+                    
+                    
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                            <div class="form-group">
+                                <label for="">Permanent State</label>
+                                <select class="form-control" name="" id="permanent_state">
+                    
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <div class="form-group">
+                                <label for="=">Permanent City</label>
+                                <select class="form-control" name="" id="permanent_city">
+                                    <option value="" disabled selected style="display: none;">first select a state</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="">Permanent Address</label>
+                        <textarea class="form-control"  rows="1" id="permanent_address"></textarea>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                            <div class="form-group">
+                                <label for="">Mobile number and Alternative numbers by comma separated </label>
+                                <input type="text" class="form-control" id="mobile" placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <div class="form-group">
+                                <label for="=">Email and Alternative emails by comma separated </label>
+                                <input type="email" class="form-control" id="email" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <span> <b>Note :</b> You can enter multple mobile number(s). & email(s) by comma <b>,</b> separated and can also be use for login. :)</span>
+                    </div>
+
+                    <div class="form-group">
+                            <label for="">Other Details (upto 4000 Character can be write/paste)</label>
+                            <textarea class="form-control"  rows="4" id="other_details"></textarea>
+                    </div>
+
+
+
+                </form>
+            </div>
+
+            <!-- <div class="panel-footer">   </div> -->
+
+
+        </div>
+
+        <div class="form-group">
+            <button type="button" id="create_update" class="btn btn-success"> Save or Update </button>
+        </div>
+
+
+
+    </div>
+
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.js"></script>
+    <script src="public/javascript/static-data.js"></script>
+
+    <script src="public/javascript/main.js"></script>
+
+
+</body>
+
+</html>

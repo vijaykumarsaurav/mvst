@@ -1,0 +1,324 @@
+<!-- Bootstrap CSS -->
+
+
+ 
+    <!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="public/css/search.css">
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css" />
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.js"></script>
+
+<script src="public/javascript/static-data.js"></script>
+<script src="public/javascript/search.js"></script>
+
+<body ng-app="myApp">
+    
+    <div ng-include="'header.html'"></div>
+
+
+
+    <div class="container" ng-controller="namesCtrl">
+
+
+
+
+        <div class="row">
+            <div class="col-sm-12 col-md-3 well">
+
+                <!-- <div class="form-group filter_by_search">
+                    <label for="">Filter by State</label>
+                </div> -->
+                <label for="">Filter by Age</label>
+                <div class="age_filter">
+                    <label for="">From</label>
+                    <select tabindex="2">
+                        <option value="">-Select-</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                        <option value="32">32</option>
+                        <option value="33">33</option>
+                        <option value="34">34</option>
+                        <option value="35">35</option>
+                        <option value="36">36</option>
+                        <option value="37">37</option>
+                        <option value="38">38</option>
+                        <option value="39">39</option>
+                        <option value="40">40</option>
+                    </select>
+                    <label for="">To</label>
+                    <select tabindex="3">
+                        <option value="">-Select-</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                        <option value="32">32</option>
+                        <option value="33">33</option>
+                        <option value="34">34</option>
+                        <option value="35">35</option>
+                        <option value="36">36</option>
+                        <option value="37">37</option>
+                        <option value="38">38</option>
+                        <option value="39">39</option>
+                        <option value="40">40</option>
+                    </select> </div>
+                <br>
+                <label for="">Filter by State</label>
+                <div class="custom-search-input" id="stateList">
+                    <input type="text" placeholder="search by states" ng-model="state" autocomplete="off" autocorrect="off"
+                        autocapitalize="off" spellcheck="false" id="filter_text" style="width: 100%;padding-left: 5px;padding-right: 5px;color: #686868;    margin-bottom: 10px;">
+                    <p class="" ng-repeat="x in stateCities | filter:state">
+                        <!-- <input type="checkbox" id="{{ x.state }}">{{ x.state }} -->
+                        <label class="">
+                            <input type="checkbox" class="statelist" value="{{x.state}}" name="state" data-bind="value: x.state, checked: x.state"
+                                ng-model="selectedState[x.state]" ng-click="selectState()" />
+                            <span data-bind="text: x.state" class="filter_data" />{{x.state}}</span>
+                        </label>
+                    </p>
+                </div>
+                <br>
+                <label for="">Filter by City</label>
+                <div class="custom-search-input">
+                    <input type="text" placeholder="search by Cities" ng-model="city" id="filter_text" style="width: 100%; padding-left: 5px;padding-right: 5px;color: #686868;    margin-bottom: 10px;">
+                    <p class="" ng-repeat="cityname in selectedCities | filter:city">
+                        <label class="">
+                            <input type="checkbox" data-bind="value: cityname, checked: cityname" />
+                            <span data-bind="text: cityname" class="filter_data" />{{cityname}}</span>
+                        </label>
+                    </p>
+                </div>
+                <br>
+                <label for="">Filter by Job Type</label>
+                <div class="job-filter">
+                    <p class="" ng-repeat="jobtype in job_types">
+                        <label class="">
+                            <input type="checkbox" data-bind="value: jobtype, checked: jobtype" />
+                            <span data-bind="text: jobtype" class="filter_data" />{{jobtype}}</span>
+                        </label>
+                    </p>
+                </div>
+                <br>
+                <label for="">Filter by Education</label>
+                <div class="custom-search-input">
+                    <p class="" ng-repeat="educ in educationTypes">
+                        <!-- <input type="checkbox" id="{{ x.state }}">{{ x.state }} -->
+                        <label class="">
+                            <input type="checkbox" data-bind="value: educ, checked: educ" />
+                            <span data-bind="text: educ" class="filter_data" />{{educ}}</span>
+                        </label>
+                    </p>
+                </div>
+
+            </div>
+            <div class="col-sm-12 col-md-9" style="padding-left: 30px;">
+                <div class="row">
+                        <span class="text-center" style="font-size:20px">Search Profile by :
+                                <label class="radio-inline">
+                                    <input type="radio" name="optradio" checked> Groom / Male
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="optradio">Bride / Female
+                                </label>
+                        </span>
+                </div>
+               
+
+                <div class="row well"  ng-repeat="user in listOfUser">
+
+                        <span style="padding: 15px"><a href=""><b>{{user.name}}</b></a></span>
+                         <br>
+                        <div style="margin-left:15px;">{{user.about}}</div> <br>
+
+                          <div class="col-sm-12 col-md-4">
+                              <a title="Click to Zoom" data-caption="{{user.name}}"  data-fancybox="gallery" href="api/uploads/IMG1545506306IMG_20181221_093051.jpg"><img
+                                      class="card_horizental_css" src="api/uploads/IMG1545506279WhatsApp Image 2018-12-09 at 5.09.18 PM.jpeg"></a>
+                          </div>
+                          <div class="col-sm-12 col-md-2">
+                              <a title="Click to Zoom" data-caption="{{user.name}}"  data-fancybox="gallery" href="api/uploads/IMG1545506279WhatsApp Image 2018-12-09 at 5.09.18 PM.jpeg"><img
+                                      class="card_vertical_css" src="api/uploads/IMG1545506279WhatsApp Image 2018-12-09 at 5.09.18 PM.jpeg"></a>
+                              <br>
+                              <a title="Click to Zoom" data-caption="{{user.name}}"  data-fancybox="gallery" href="api/uploads/IMG1545506279WhatsApp Image 2018-12-09 at 5.09.18 PM.jpeg"><img
+                                      class="card_vertical_css" src="api/uploads/IMG1545506279WhatsApp Image 2018-12-09 at 5.09.18 PM.jpeg"></a>
+                              <br>
+                              <b class="more_photos_dots">
+                                  +5
+                              </b>
+                          </div>
+                          <div class="col-sm-12 col-md-6">
+                              <table class="table table-striped">
+                                  <tbody>
+                                      <tr>
+                                          <th scope="row" class="header_title">Name</th>
+                                          <td id="name">Vijay Kumar</td>
+                                      </tr>
+                                      <tr>
+                                          <th scope="row" class="header_title">Gender</th>
+                                          <td id="name">Vijay Kumar</td>
+                                      </tr>
+                                      <tr>
+                                          <th scope="row" class="header_title">DOB (Age)</th>
+                                          <td id="name">17-11-1990(28 Years)</td>
+                                      </tr>
+                                      <tr>
+                                          <th scope="row" class="header_title">Complexion</th>
+                                          <td id="name">Vijay Kumar</td>
+                                      </tr>
+
+                                      <tr>
+                                          <th scope="row">Height</th>
+                                          <td id="name">5'8"</td>
+                                      </tr>
+
+                                      <tr>
+                                          <th scope="row">Higher Education</th>
+                                          <td id="name">MCA</td>
+                                      </tr>
+
+                                      <tr>
+                                          <th scope="row">Job Details</th>
+                                          <td id="name">Sr. Software Engineer at Bharti Airtel </td>
+                                      </tr>
+                                      <tr>
+                                          <th scope="row">Income</th>
+                                          <td id="name">Sr. Software Engineer at Bharti Airtel </td>
+                                      </tr>
+                                      <tr>
+                                          <th scope="row" title="current city - permanent city">Address</th>
+                                          <td id="name">Bangalore - Muzaffarpur</td>
+                                      </tr>
+                                      <tr>
+                                          <th scope="row" colspan="2" title="current city - permanent city"><a href=''>
+                                            View more Details about family, contact number & all...</a></th>
+                                      </tr>
+                                  </tbody>
+                              </table>
+                          </div>
+                          <span class="last_login">Last time active at : 01-01-2019 8:30pm </span>
+
+              </div>
+
+
+
+            </div>
+
+        </div>
+
+
+        <!-- <div class="row hide">
+            <div class="col-sm-12 col-md-3 card_padding">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top card_css" src="api/uploads/IMG1545506279WhatsApp Image 2018-12-09 at 5.09.18 PM.jpeg"
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title"> Vijay Kumar</h5>
+                        <p class="card-text"> 27,5'8", Wheatish, Sr. Software Engineer at Airtel</p>
+                        <a href="#" class="btn btn-primary"> View Profile</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-3 card_padding">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top card_css" src="api/uploads/IMG1545506279WhatsApp Image 2018-12-09 at 5.09.18 PM.jpeg"
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title"> Vijay Kumar</h5>
+                        <p class="card-text"> 27,5'8", Wheatish, Sr. Software Engineer at Airtel</p>
+                        <a href="#" class="btn btn-primary"> View Profile</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-3 card_padding">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top card_css" src="api/uploads/IMG1545506279WhatsApp Image 2018-12-09 at 5.09.18 PM.jpeg"
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title"> Vijay Kumar</h5>
+                        <p class="card-text"> 27,5'8", Wheatish, Sr. Software Engineer at Airtel</p>
+                        <a href="#" class="btn btn-primary"> View Profile</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-3 card_padding">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top card_css" src="api/uploads/IMG1545506279WhatsApp Image 2018-12-09 at 5.09.18 PM.jpeg"
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title"> Vijay Kumar</h5>
+                        <p class="card-text"> 27,5'8", Wheatish, Sr. Software Engineer at Airtel</p>
+                        <a href="#" class="btn btn-primary"> View Profile</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-3 card_padding">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top card_css" src="api/uploads/IMG1545506279WhatsApp Image 2018-12-09 at 5.09.18 PM.jpeg"
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title"> Vijay Kumar</h5>
+                        <p class="card-text"> 27,5'8", Wheatish, Sr. Software Engineer at Airtel</p>
+                        <a href="#" class="btn btn-primary"> View Profile</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-3 card_padding">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top card_css" src="api/uploads/IMG1545506279WhatsApp Image 2018-12-09 at 5.09.18 PM.jpeg"
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title"> Vijay Kumar</h5>
+                        <p class="card-text"> 27,5'8", Wheatish, Sr. Software Engineer at Airtel</p>
+                        <a href="#" class="btn btn-primary"> View Profile</a>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+        </div> -->
+
+
+
+
+    </div>
+
+
+    <div ng-include="'footer.html'"></div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+
+
+  .card_css{
+    width : 225px;
+  }
+
+  .card_horizental_css{
+    width : 300px;
+    height: 350px;
+  }
+
+  .card_vertical_css{
+    width : 120px;
+    padding: 0px 5px 5px 5px ;
+    /* height: 55px; */
+  }
+  .more_photos_dots{
+    margin-left: 46px;
+    font-size: 35px;
+    color: darkgrey; 
+  }
+
+  .card_padding{
+      padding: 30px;
+  }
+
+  .filter_by_search{
+      max-height: 200px;
+  }
+
+  .custom-search-input{
+    padding: 15px;
+    border: solid 0px #E4E4E4;
+    border-radius: 0px;
+    background-color: rgb(228, 228, 228);
+    height: 250px;
+    /* width: 200px; */
+    overflow-y: scroll;
+}
+
+.job-filter{
+    padding: 15px;
+    border: solid 0px #E4E4E4;
+    border-radius: 0px;
+    background-color: rgb(228, 228, 228);
+    height: 190px;
+    /* width: 200px; */
+    overflow-y: scroll;
+}
+
+.age_filter{
+    padding: 15px;
+    border: solid 0px #E4E4E4;
+    border-radius: 0px;
+    background-color: rgb(228, 228, 228); 
+}
+
+.filter_data{
+    font-weight: normal; 
+}
+.search_heading{
+    font-size: 18px;
+}
+
+.profile_outer{
+    border-bottom: 1px solid gray;
+}
+
+.well{
+    padding : 15px !important;
+}
+
+.last_login {
+    float: left;
+    color: dimgray;
+    margin-top: -21px;
+    margin-left: 15px;
+}
